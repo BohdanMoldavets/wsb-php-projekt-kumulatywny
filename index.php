@@ -64,7 +64,7 @@ $balance = $_SESSION["balance"];
                 </div>
 
                 <div class="text-center">
-                    <input type="submit" value="Withdraw all" name="delete" class="btn btn-danger">
+                    <input type="submit" value="Withdraw all" name="delete" class="btn btn-danger" onclick="customFunction()">
                 </div>
             </div>
         </form>
@@ -72,6 +72,11 @@ $balance = $_SESSION["balance"];
 
     <!-- Bootstrap JS (optional) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function customFunction() {
+            alert("All money was withdrawed");
+        }
+    </script>
 </body>
 
 </html>
