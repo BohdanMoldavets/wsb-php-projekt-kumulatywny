@@ -54,7 +54,7 @@ $balance = $_SESSION["balance"];
         <form method="post">
             <div class="card p-4 shadow-sm">
                 <div class="mb-3">
-                    <input type="text" class="form-control text-center fw-bold" value="<?php echo $balance; ?>$" disabled>
+                    <input type="text" id="balance" class="form-control text-center fw-bold" value="<?php echo $balance; ?>$" disabled>
                 </div>
 
                 <div class="d-flex justify-content-between mb-3">
@@ -70,8 +70,33 @@ $balance = $_SESSION["balance"];
         </form>
     </div>
 
-    <!-- Bootstrap JS (optional) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        $(document).ready(function () {
+        $("form").on("submit", function () {
+            const $balance = $("#balance");
+
+            $balance
+                .css({ backgroundColor: "#d1e7dd" })
+                .animate({ fontSize: "2.5rem" }, 200)
+                .animate({ fontSize: "2rem" }, 200, function () {
+                    $balance.css({ backgroundColor: "" });
+                });
+        });
+    });
+    </script>
+    <script>
+        $(document).ready(function () {
+        $('input[name="delete"]').hover(function () {
+            $(this).css("background-color", "#dc3545");
+        });
+
+        $('input[name="custom_amount"]').on("input", function () {
+            console.log("Customer just entered: " + $(this).val() + "$");
+        });
+    });
+    </script>
     <script>
         function customFunction() {
             alert("All money was withdrawed");

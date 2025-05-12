@@ -1,6 +1,6 @@
 body {
     background: #f8f9fa;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: sans-serif;
 }
 
 h1 {
@@ -8,15 +8,15 @@ h1 {
 }
 
 .card {
-    border-radius: 1rem;
-    background-color: #ffffff;
+    background: white;
+    border-radius: 16px;
     border: none;
 }
 
 input.form-control[disabled] {
     font-size: 2rem;
     color: #198754;
-    background-color: #e9ecef;
+    background: #e9ecef;
     border: none;
 }
 
@@ -29,22 +29,11 @@ input.form-control[disabled] {
 }
 
 form .mb-3 input[type="text"] {
-    font-weight: 600;
+    font-weight: bold;
 }
 
-.atm-custom-deposit {
-    margin-bottom: 1rem;
-    max-width: 400px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.atm-display {
-    max-width: 500px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
+.atm-custom-deposit,
+.atm-display,
 .custom-deposit-form {
     max-width: 400px;
     margin: 0 auto 30px;
@@ -72,8 +61,8 @@ form .mb-3 input[type="text"] {
 
 .custom-button {
     padding: 10px 20px;
-    background-color: #0d6efd;
-    color: #fff;
+    background: #0d6efd;
+    color: white;
     border: none;
     border-radius: 8px;
     font-weight: bold;
@@ -82,5 +71,35 @@ form .mb-3 input[type="text"] {
 }
 
 .custom-button:hover {
-    background-color: #0b5ed7;
+    background: #0b5ed7;
+}
+
+@media (max-width: 576px) {
+    h1 {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .card {
+        padding: 1rem;
+    }
+
+    .btn {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .custom-deposit-group {
+        flex-direction: column;
+    }
+
+    .custom-input,
+    .custom-button {
+        width: 100%;
+        font-size: 1rem;
+    }
+
+    input.form-control[disabled] {
+        font-size: 1.5rem;
+    }
 }
