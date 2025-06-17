@@ -20,6 +20,16 @@ input.form-control[disabled] {
     border: none;
 }
 
+.forma {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.forms {
+    max-width: 600px;
+}
+
 .btn {
     min-width: 120px;
 }
@@ -72,34 +82,4 @@ form .mb-3 input[type="text"] {
 
 .custom-button:hover {
     background: #0b5ed7;
-}
-
-@media (max-width: 576px) {
-    h1 {
-        font-size: 1.5rem;
-        text-align: center;
-    }
-
-    .card {
-        padding: 1rem;
-    }
-
-    .btn {
-        width: 100%;
-        margin-bottom: 10px;
-    }
-
-    .custom-deposit-group {
-        flex-direction: column;
-    }
-
-    .custom-input,
-    .custom-button {
-        width: 100%;
-        font-size: 1rem;
-    }
-
-    input.form-control[disabled] {
-        font-size: 1.5rem;
-    }
 }

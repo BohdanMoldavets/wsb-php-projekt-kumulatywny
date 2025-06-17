@@ -1,0 +1,59 @@
+@media (max-width: 576px) {
+    h1 {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .card {
+        padding: 1rem;
+    }
+
+    .btn {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .custom-deposit-group {
+        flex-direction: column;
+    }
+
+    .custom-input,
+    .custom-button {
+        width: 100%;
+        font-size: 1rem;
+    }
+
+    input.form-control[disabled] {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 426px) {
+    .buttons {
+        display: block !important;
+    }
+
+    .depos {
+        margin-top: 10px;
+        border-radius: 0px;
+    }
+}
+
+@media (max-width: 375px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    input.form-control[disabled] {
+        font-size: 1.2rem;
+    }
+
+    .btn {
+        padding: 8px 12px;
+        font-size: 0.9rem;
+    }
+
+    .buttons {
+        display: block !important;
+    }
+}

@@ -1,0 +1,8 @@
+CREATE DATABASE IF NOT EXISTS atm_app;
+USE atm_app;
+
+CREATE TABLE IF NOT EXISTS accounts (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT NOT NULL,
+    balance INT NOT NULL DEFAULT 0
+);
